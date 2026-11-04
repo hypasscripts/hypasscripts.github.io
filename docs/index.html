@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b1320">
-  <meta name="description" content="Hypas Development creates premium RedM scripts for VORP servers: Anti-Cheat, Law MDT, immersive systems, documentation and The Lobby RedM community.">
+  <meta name="description" content="Hypas Development creates premium RedM scripts for VORP servers: Anti-Cheat, Law MDT, Archivist, NPC Sales, documentation and The Lobby RedM community.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://hypasscripts.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Hypas Development | Premium RedM Scripts & Community">
-  <meta property="og:description" content="RedM security, law-enforcement tools, immersive systems and The Lobby community. Build a better frontier.">
+  <meta property="og:description" content="RedM security, law enforcement, historical exploration, NPC economy systems and The Lobby community. Build a better frontier.">
   <meta property="og:url" content="https://hypasscripts.github.io/">
   <title>Hypas Development | Premium RedM Scripts for VORP Servers</title>
   <style>
@@ -152,6 +152,13 @@
     .compact {min-height:unset}.compact .num{margin-bottom:15px}
     @media(max-width:900px) {.hero-home {padding:62px 0}.split-grid,.community-promo{grid-template-columns:1fr}.hero-shield{max-width:640px}.mini-cards,.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:610px) {.hero-home{padding-top:43px}.mini-cards,.resource-grid{grid-template-columns:1fr}.product-card{padding:24px}.community-promo{padding:25px}.card-actions .smallbtn{width:100%}}
+    /* New released product cards */
+    .new-product-card{display:flex;flex-direction:column;gap:0;min-height:unset!important}
+    .new-product-card .num{margin-bottom:15px}
+    .new-card-image{display:block;width:100%;height:210px;object-fit:cover;object-position:center top;background:#101c2a;border:1px solid #334d63;border-radius:10px;margin:0 0 21px}
+    .new-card-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:22px}
+    .new-product-card .smallbtn{font-size:12px}
+    @media(max-width:610px){.new-card-links .smallbtn{width:100%}}
 </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Hypas Development","url":"https://hypasscripts.github.io/","sameAs":["https://github.com/hypasscripts"]}</script>
 </head>
@@ -165,7 +172,7 @@
 <main id="main">
 <div class="wrap hero hero-home">
 <div><div class="eyebrow">Premium RedM Systems // Hypas Development</div><h1>Build a server players remember. <span>Build a better frontier.</span></h1>
-<p class="hero-desc">RedM security, law enforcement and immersive roleplay systems for serious VORP servers. Explore our resources, learn how they work and connect with fellow developers in The Lobby.</p>
+<p class="hero-desc">RedM security, law enforcement, exploration and economy systems for serious VORP servers. Explore Anti-Cheat, MDT, Archivist and NPC Sales, and connect with fellow developers in The Lobby.</p>
 <div class="actions"><a class="btn btn-primary" href="#products">Explore Hypas Scripts ↗</a><a class="btn btn-secondary" href="/community/">Discover The Lobby</a></div>
 <div class="pills" aria-label="Development areas"><span class="pill">RedM / VORP</span><span class="pill">Server Security</span><span class="pill">Law Systems</span><span class="pill">Community</span></div></div>
 <div class="hero-shield" aria-label="Hypas Anti-Cheat dashboard showcase"><div class="shield-head"><span>HYPAS SECURITY // DASHBOARD PREVIEW</span><span>REDM / VORP</span></div>
@@ -177,8 +184,9 @@
 <article class="product-card"><div class="eyebrow">02 / Law &amp; Administration</div><h3>Hypas Law MDT</h3><p>Operational records for serious RedM law departments: reports, citizen profiles, warrants, fines, penal codes, audit trails and rank-controlled access.</p><div class="card-tags"><span>VORP</span><span>Case Management</span><span>Auditability</span></div><div class="card-actions"><a class="smallbtn gold" href="/hypas-redm-mdt/">Explore Law MDT ↗</a><a class="smallbtn" href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Storefront</a></div></article>
 </div>
 <div class="mini-cards" style="margin-top:16px">
-<article class="feature compact"><div class="num">03 / IMMERSIVE ROLEPLAY</div><h3>Hypas Archivist</h3><p>Artefact discovery, museum collections and meaningful player decisions around donated, kept or sold relics.</p><p><a href="https://forum.cfx.re/t/hypas-archivist-redm-vorp/5434322" target="_blank" rel="noopener noreferrer">View the release →</a></p></article>
-<article class="feature compact"><div class="num">04 / MORE IN DEVELOPMENT</div><h3>Farming, Stables &amp; Frontier</h3><p>More systems for ownership, economy, horses, veterinary care and immersive roleplay as testing and release work progresses.</p><p><a href="#roadmap">Explore the roadmap →</a></p></article></div>
+<article class="feature compact new-product-card"><div class="num">03 / EXPLORATION · AVAILABLE NOW</div><img class="new-card-image" src="https://dunb17ur4ymx4.cloudfront.net/packages/images/40cbfe47c283c5e7a943bb671aeee1cf8f3e3bfe.png" alt="Hypas Archivist Museum Ledger screenshot" loading="lazy"><h3>Hypas Archivist</h3><p>Explore 12 historical locations, discover 61 artefacts, solve mysteries and build the frontier's museum collections.</p><div class="new-card-links"><a class="smallbtn gold" href="/hypas-archivist/">Explore Archivist ↗</a><a class="smallbtn" href="https://the-lobby-shop.tebex.io/package/7750348" target="_blank" rel="noopener noreferrer">Buy on Tebex</a></div></article>
+<article class="feature compact new-product-card"><div class="num">04 / UNDERGROUND ECONOMY · AVAILABLE NOW</div><img class="new-card-image" src="https://dunb17ur4ymx4.cloudfront.net/packages/images/e2edee1e4ce5c0b15c69b748a6b48395d259ea78.png" alt="Hypas NPC Sales Dealer’s Ledger screenshot" loading="lazy"><h3>Hypas NPC Sales</h3><p>Risk-driven NPC trading with negotiation, robberies, dealer reputation, town heat and law enforcement consequences.</p><div class="new-card-links"><a class="smallbtn gold" href="/hypas-npc-sales/">Explore NPC Sales ↗</a><a class="smallbtn" href="https://the-lobby-shop.tebex.io/package/7520472" target="_blank" rel="noopener noreferrer">Buy on Tebex</a></div></article>
+</div>
 </div></section>
 <section class="section" id="community"><div class="wrap"><div class="community-promo"><div><div class="eyebrow">The Lobby // Community</div><h2>More than a script store.</h2><p>A home for RedM server owners, developers, roleplayers and content creators. Trade ideas, share work, find development discussions and help shape the next generation of Hypas systems.</p><div class="actions"><a class="btn btn-primary" href="/community/">Explore our Community Hub ↗</a><a class="btn btn-secondary" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Join Discord</a></div></div>
 <ul><li><b>01</b> RedM and VORP development discussions</li><li><b>02</b> Community showcases and player projects</li><li><b>03</b> Hypas resources, updates and support guidance</li></ul></div></div></section>
@@ -197,6 +205,6 @@
 <div class="actions"><a class="btn btn-secondary" href="https://github.com/hypasscripts" target="_blank" rel="noopener noreferrer">Explore public repositories ↗</a><a class="btn btn-secondary" href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Browse the store</a></div></div></section>
 <section class="final"><div class="wrap final-inner"><div class="eyebrow">Your frontier starts here</div><h2>Build with purpose. Connect with people.</h2><p>Discover premium RedM resources, join The Lobby and follow real development work in one place.</p><div class="actions"><a class="btn btn-primary" href="/community/">Join our Community ↗</a><a class="btn btn-secondary" href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Visit Tebex</a></div></div></section>
 </main>
-<footer><div class="wrap footer-inner"><small>HYPAS DEVELOPMENT / REDM SYSTEMS &amp; COMMUNITY</small><div class="footer-links"><a href="/community/">Community</a><a href="/hypas-redm-anticheat/">Anti-Cheat</a><a href="/hypas-redm-mdt/">Law MDT</a><a href="https://github.com/hypasscripts" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Storefront</a></div></div></footer>
+<footer><div class="wrap footer-inner"><small>HYPAS DEVELOPMENT / REDM SYSTEMS &amp; COMMUNITY</small><div class="footer-links"><a href="/community/">Community</a><a href="/hypas-redm-anticheat/">Anti-Cheat</a><a href="/hypas-redm-mdt/">Law MDT</a><a href="/hypas-archivist/">Archivist</a><a href="/hypas-npc-sales/">NPC Sales</a><a href="https://github.com/hypasscripts" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Storefront</a></div></div></footer>
 </body>
 </html>
