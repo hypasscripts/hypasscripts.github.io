@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1320">
+  <meta name="description" content="Join The Lobby by Hypas Scripts: a RedM community for VORP server owners, developers, roleplayers and content creators. Discussions, server showcases, development insights and support.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Lobby | Hypas Scripts RedM Community">
+  <meta property="og:description" content="A place for RedM server owners, developers, roleplayers and creators to share knowledge, projects and ideas. Join The Lobby Discord.">
+  <meta property="og:url" content="https://hypasscripts.github.io/community/">
+  <link rel="canonical" href="https://hypasscripts.github.io/community/">
+  <title>The Lobby | RedM Community, Development & Support — Hypas Scripts</title>
+  <style>
+    :root { color-scheme: dark; --base:#0b1320; --surface:#101b2b; --card:#152438; --card2:#101e2d; --line:#2b3e52; --text:#f2f5f9; --muted:#b0bfd0; --subtle:#7f96ac; --accent:#c8a776; --accent-light:#e2c79c; --accent-dark:#151a22; --max:1180px; }
+    *,*::before,*::after {box-sizing:border-box}
+    html {scroll-behavior:smooth}
+    body {margin:0;min-width:320px;background:var(--base);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    body::before {content:"";position:absolute;top:0;left:0;right:0;height:720px;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 72% 10%,rgba(60,89,117,.30),transparent 52%),radial-gradient(ellipse at 10% 25%,rgba(106,78,48,.12),transparent 42%)}
+    a {color:inherit}
+    a:focus-visible,button:focus-visible {outline:3px solid var(--accent-light);outline-offset:4px}
+    .wrap {width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+    .skip {position:absolute;left:-9999px;top:0;padding:12px;background:var(--accent);color:#101820;z-index:5}
+    .skip:focus {left:10px;top:10px}
+    .site-header {border-bottom:1px solid rgba(158,182,205,.14);background:rgba(11,19,32,.85);backdrop-filter:blur(14px);position:sticky;top:0;z-index:10}
+    .topbar {min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand {display:flex;align-items:center;gap:13px;text-decoration:none;line-height:1.12}
+    .brand-mark {display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(200,167,118,.55);border-radius:10px;background:linear-gradient(145deg,#2f3942,#131d29);font-size:21px;font-weight:900;color:var(--accent-light)}
+    .brand-name {display:block;letter-spacing:.10em;font-size:13px;font-weight:850}
+    .brand-sub {display:block;letter-spacing:.13em;text-transform:uppercase;color:var(--subtle);font-size:10px;font-weight:700;margin-top:5px}
+    nav {display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+    nav a {text-decoration:none;font-size:13px;font-weight:680;color:#bac6d4;transition:color .15s}
+    nav a:hover,nav a[aria-current="page"] {color:var(--accent-light)}
+    nav .nav-cta {color:#151a22;background:var(--accent);padding:9px 15px;border-radius:8px}
+    nav .nav-cta:hover {color:#101820;background:#e0bf90}
+    .eyebrow {font-size:11px;color:var(--accent-light);font-weight:800;letter-spacing:.19em;text-transform:uppercase}
+    h1,h2,h3,p {margin-top:0}
+    h1 {font-size:clamp(42px,5.65vw,79px);font-weight:820;line-height:1.07;letter-spacing:-.055em;margin:18px 0 24px;max-width:700px}
+    h1 span {color:var(--accent-light)}
+    h2 {font-size:clamp(29px,3.5vw,43px);line-height:1.14;letter-spacing:-.04em;margin-bottom:14px}
+    h3 {font-size:19px;line-height:1.25;margin-bottom:8px}
+    p {color:var(--muted)}
+    .hero {display:grid;grid-template-columns:1.13fr .87fr;align-items:center;gap:clamp(24px,5vw,82px);padding:90px 0 106px}
+    .hero-desc {max-width:565px;font-size:18px;line-height:1.8}
+    .actions {display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:33px}
+    .btn {display:inline-flex;justify-content:center;align-items:center;text-decoration:none;font-weight:800;font-size:14px;border-radius:9px;padding:15px 21px;min-height:50px;transition:transform .15s, background .15s;border:1px solid transparent}
+    .btn:hover {transform:translateY(-2px)}
+    .btn-primary {color:#151921;background:var(--accent)}
+    .btn-primary:hover {background:var(--accent-light)}
+    .btn-secondary {border-color:#52647b;color:#e1e8ef;background:rgba(18,33,49,.58)}
+    .btn-secondary:hover {background:#23374b}
+    .pills {display:flex;gap:9px;flex-wrap:wrap;margin-top:29px}
+    .pill {padding:5px 11px;border-radius:100px;border:1px solid #354c62;color:#abc0d0;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .console {position:relative;border:1px solid #37516a;border-radius:18px;padding:24px;background:linear-gradient(155deg,#172b3f 0%,#101c2c 78%);box-shadow:0 30px 80px rgba(0,0,0,.25)}
+    .console:before {content:"";position:absolute;inset:9px;border-radius:13px;border:1px solid rgba(220,236,247,.06);pointer-events:none}
+    .console-title {display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:19px;border-bottom:1px solid #32465b;margin-bottom:18px}
+    .console-title strong {letter-spacing:.12em;font-size:12px}
+    .live-dot {width:8px;height:8px;border-radius:50%;background:#90bea7;box-shadow:0 0 0 5px rgba(144,190,167,.12)}
+    .console-lead {font-size:10px;text-transform:uppercase;letter-spacing:.16em;color:var(--accent-light);font-weight:900;margin-bottom:13px}
+    .console h2 {font-size:29px;letter-spacing:-.03em;margin-bottom:12px}
+    .console>p {font-size:14px;line-height:1.7}
+    .console-lines {margin-top:25px;display:grid;gap:10px}
+    .line-item {border:1px solid #2b4458;background:#122335;border-radius:9px;padding:13px 14px;display:flex;align-items:center;gap:12px}
+    .line-icon {color:var(--accent-light);display:grid;place-items:center;width:33px;height:33px;background:rgba(200,167,118,.10);border:1px solid rgba(200,167,118,.15);border-radius:8px;font-weight:900}
+    .line-item strong {display:block;font-size:13px;font-weight:800;line-height:1.2}
+    .line-item small {display:block;margin-top:4px;color:#8fa5b9;font-size:11px}
+    .console-bottom {border-top:1px solid #34465b;margin-top:19px;padding-top:16px;font-size:11px;letter-spacing:.09em;font-weight:700;text-transform:uppercase;color:#b0c1ce;display:flex;justify-content:space-between}
+    .section {padding:84px 0;border-top:1px solid rgba(165,190,212,.14)}
+    .section-intro {max-width:700px;margin-bottom:32px}
+    .section-intro p {font-size:16px;max-width:640px}
+    .grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .feature {background:linear-gradient(135deg,#142235,#111d2b);border:1px solid #2a4056;border-radius:14px;padding:26px;min-height:230px}
+    .feature .num {color:var(--accent-light);font-size:11px;font-weight:900;letter-spacing:.15em;margin-bottom:27px}
+    .feature p {font-size:14px;line-height:1.75;margin-bottom:0}
+    .panel {display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:35px;border:1px solid #32495e;border-radius:18px;background:linear-gradient(100deg,#162438,#10202f)}
+    .panel p {margin:0;font-size:15px}
+    .list {list-style:none;padding:0;margin:0;display:grid;gap:14px}
+    .list li {display:flex;align-items:flex-start;gap:11px;color:#c2cfda;font-size:14px}
+    .tick {display:grid;place-items:center;border:1px solid rgba(200,167,118,.5);border-radius:6px;color:var(--accent-light);width:22px;height:22px;flex:none;font-weight:800}
+    .faq {display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .faq article {border:1px solid #2d4156;background:#101c2c;border-radius:12px;padding:24px}
+    .faq h3 {font-size:17px}
+    .faq p {font-size:14px;margin-bottom:0}
+    .final {padding:77px 0 94px;text-align:center}
+    .final .final-inner {border:1px solid #4a4b42;border-radius:18px;padding:64px 26px;background:radial-gradient(ellipse at 50% 0%,rgba(200,167,118,.12),transparent 60%),#111d2c}
+    .final h2 {max-width:670px;margin:12px auto 17px}
+    .final p {max-width:600px;margin:0 auto}
+    .final .actions {justify-content:center;margin-top:30px}
+    footer {border-top:1px solid #2a3a4c;padding:33px 0}
+    .footer-inner {display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .footer-inner small {color:#8398ad;font-size:12px}
+    .footer-links {display:flex;gap:19px;flex-wrap:wrap}
+    .footer-links a {font-size:12px;text-decoration:none;color:#aabaca}
+    .footer-links a:hover {color:var(--accent-light)}
+    @media(max-width:900px) {.hero {grid-template-columns:1fr;padding:60px 0 75px}.console {max-width:640px}.grid {grid-template-columns:1fr 1fr}.topbar {align-items:flex-start;padding:14px 0;flex-direction:column;gap:16px}nav {gap:17px}.panel {grid-template-columns:1fr}}
+    @media(max-width:610px) {.wrap {width:min(var(--max),calc(100% - 32px))}.topbar {gap:12px}nav {gap:14px}nav a {font-size:12px}.hero {padding-top:43px}.hero-desc {font-size:16px}.grid,.faq {grid-template-columns:1fr}.section {padding:60px 0}.panel {padding:24px}.console {padding:20px}.final {padding:50px 0}.final .final-inner {padding:40px 21px}.footer-inner {align-items:flex-start;flex-direction:column}.btn {width:100%}.actions {width:100%}}
+    @media(prefers-reduced-motion:reduce) {html {scroll-behavior:auto}.btn {transition:none}.btn:hover {transform:none}}
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"The Lobby — Hypas Scripts RedM Community","url":"https://hypasscripts.github.io/community/","description":"A RedM and VORP community for server owners, developers, roleplayers and content creators.","isPartOf":{"@type":"WebSite","name":"Hypas Development","url":"https://hypasscripts.github.io/"}}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap topbar">
+      <a href="/" class="brand" aria-label="Hypas Development home">
+        <span class="brand-mark" aria-hidden="true">H</span><span><span class="brand-name">HYPAS DEVELOPMENT</span><span class="brand-sub">RedM Systems &amp; Community</span></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/#products">Products</a>
+        <a href="/hypas-redm-anticheat/">Anti-Cheat</a>
+        <a href="/community/" aria-current="page">Community</a>
+        <a href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Storefront</a>
+        <a class="nav-cta" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Join Discord ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">The Lobby // Hypas Community</div>
+        <h1>Build a better frontier. <span>Together.</span></h1>
+        <p class="hero-desc">A community for RedM server owners, VORP developers, roleplayers and creators. Share your work, ask questions and explore ideas with people who care about building great experiences.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Join The Lobby Discord ↗</a>
+          <a class="btn btn-secondary" href="#inside">Explore the community</a>
+        </div>
+        <div class="pills" aria-label="Community interests"><span class="pill">RedM</span><span class="pill">VORP</span><span class="pill">Server Development</span><span class="pill">Roleplay</span></div>
+      </div>
+      <aside class="console" aria-label="The Lobby overview">
+        <div class="console-title"><strong>HYPAS / THE LOBBY</strong><span class="live-dot" aria-hidden="true"></span></div>
+        <div class="console-lead">Open Community // RedM</div>
+        <h2>More than a script store.</h2>
+        <p>A place to exchange practical ideas, meet other server owners and follow the work behind Hypas Scripts.</p>
+        <div class="console-lines">
+          <div class="line-item"><span class="line-icon">01</span><div><strong>Development discussion</strong><small>RedM workflows, VORP and scripting ideas</small></div></div>
+          <div class="line-item"><span class="line-icon">02</span><div><strong>Projects &amp; server showcases</strong><small>Share screenshots, clips and builds</small></div></div>
+          <div class="line-item"><span class="line-icon">03</span><div><strong>Hypas resources &amp; support</strong><small>Updates, guidance and product discussions</small></div></div>
+        </div>
+        <div class="console-bottom"><span>No purchase required</span><span>Join freely ↗</span></div>
+      </aside>
+    </div>
+    <section class="section" id="inside">
+      <div class="wrap">
+        <div class="section-intro"><div class="eyebrow">Inside The Lobby</div><h2>Come for RedM. Stay for the community.</h2><p>Whether you run a server, build resources or simply enjoy roleplay, there's a conversation you can contribute to.</p></div>
+        <div class="grid">
+          <article class="feature"><div class="num">01 / LEARN</div><h3>Server owners &amp; developers</h3><p>Discuss VORP, security, systems design and practical challenges with other members. Ask questions and exchange experience.</p></article>
+          <article class="feature"><div class="num">02 / CREATE</div><h3>Show your work</h3><p>Share server screenshots, videos, scripts, ideas and projects. Discover what other RedM creators are building.</p></article>
+          <article class="feature"><div class="num">03 / PARTICIPATE</div><h3>Questions, polls &amp; ideas</h3><p>Join community conversations, vote in polls and suggest ideas that may influence future Hypas development.</p></article>
+          <article class="feature"><div class="num">04 / EXPLORE</div><h3>The Unwritten West</h3><p>Opt into the RedM roleplay community to follow its development, discuss stories and connect with roleplayers.</p></article>
+          <article class="feature"><div class="num">05 / SUPPORT</div><h3>Hypas product guidance</h3><p>Find relevant documentation and discuss Hypas resources. Product-specific support remains subject to the applicable licence terms.</p></article>
+          <article class="feature"><div class="num">06 / CONNECT</div><h3>Creators &amp; gaming</h3><p>Meet streamers, showcase content and choose gaming interests without having every channel forced into your view.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="how-it-works">
+      <div class="wrap">
+        <div class="panel">
+          <div><div class="eyebrow">A community with direction</div><h2>Start with what matters to you.</h2><p>Our Discord onboarding lets you select your interests. The main community stays accessible to everyone, while specialist sections are optional.</p><div class="actions"><a class="btn btn-primary" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Explore The Lobby ↗</a></div></div>
+          <ul class="list" aria-label="Getting started steps">
+            <li><span class="tick">✓</span><span><strong>Join the server.</strong> Read the welcome and community guidance.</span></li>
+            <li><span class="tick">✓</span><span><strong>Pick your interests.</strong> Follow Hypas, The Unwritten West or other gaming topics.</span></li>
+            <li><span class="tick">✓</span><span><strong>Introduce yourself.</strong> Tell members what you're developing or playing.</span></li>
+            <li><span class="tick">✓</span><span><strong>Get involved.</strong> Join a discussion, answer a poll or showcase your work.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="resources">
+      <div class="wrap">
+        <div class="section-intro"><div class="eyebrow">The Hypas ecosystem</div><h2>Explore the resources behind the community.</h2><p>The Lobby is open to everyone. If you're looking for a specific RedM system, these public pages explain what Hypas builds and how it works.</p></div>
+        <div class="grid">
+          <article class="feature"><div class="num">SECURITY / REDM</div><h3>Hypas Anti-Cheat</h3><p>Layered protection, evidence-led investigations and operational tools for VORP server administrators.</p><p><a href="/hypas-redm-anticheat/">View Anti-Cheat →</a></p></article>
+          <article class="feature"><div class="num">LAW / REDM</div><h3>Hypas Law MDT</h3><p>Structured reports, warrants, fines, records and oversight built for serious RedM roleplay.</p><p><a href="/hypas-redm-mdt/">Explore Law MDT →</a></p></article>
+          <article class="feature"><div class="num">LEARNING / GUIDE</div><h3>Security Centre</h3><p>Practical defensive guides about RedM server security, event validation and evidence-led investigations.</p><p><a href="/hypas-redm-anticheat/security-centre/">Read the guides →</a></p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-intro"><div class="eyebrow">Before you join</div><h2>A few straight answers.</h2></div>
+        <div class="faq">
+          <article><h3>Do I need to buy a Hypas script?</h3><p>No. The Lobby is a public community. You can join conversations and access the public community areas without purchasing anything.</p></article>
+          <article><h3>Is this only for VORP developers?</h3><p>No. RedM server owners, developers, players, roleplayers and content creators are welcome. Some technical resources are VORP-focused.</p></article>
+          <article><h3>Can I share my own server?</h3><p>Yes, use the community's relevant showcase channels and follow the server rules. Keep promotion relevant and respectful.</p></article>
+          <article><h3>Where do I get support for a Hypas product?</h3><p>Start with the product documentation and the support information available in Discord. Entitled support depends on your specific licence.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="final">
+      <div class="wrap final-inner"><div class="eyebrow">Your place at the frontier</div><h2>Good communities are built by the people in them.</h2><p>Get involved, share an idea, find someone working on a similar challenge or simply join the conversation.</p><div class="actions"><a class="btn btn-primary" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Join The Lobby Discord ↗</a><a class="btn btn-secondary" href="/">Back to Hypas Development</a></div></div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><small>HYPAS DEVELOPMENT / REDM SYSTEMS &amp; COMMUNITY</small><div class="footer-links"><a href="/">Home</a><a href="/hypas-redm-anticheat/">Anti-Cheat</a><a href="https://the-lobby-shop.tebex.io/">Tebex Store</a><a href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Discord</a></div></div></footer>
+</body>
+</html>
