@@ -1,430 +1,202 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <title>Hypas Development | Premium RedM Scripts for VORP Servers</title>
-  <meta name="description" content="Hypas Development creates premium RedM scripts for VORP servers, including Hypas Anti-Cheat, Hypas Law MDT, economy systems, roleplay resources and technical documentation.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1320">
+  <meta name="description" content="Hypas Development creates premium RedM scripts for VORP servers: Anti-Cheat, Law MDT, immersive systems, documentation and The Lobby RedM community.">
   <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#081018">
-
   <link rel="canonical" href="https://hypasscripts.github.io/">
-  <link rel="stylesheet" href="assets/style.css">
-  <script defer src="assets/main.js"></script>
-
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Hypas Development | Premium RedM Systems">
-  <meta property="og:description" content="Premium RedM scripts, technical documentation and practical resources for serious VORP roleplay servers.">
+  <meta property="og:title" content="Hypas Development | Premium RedM Scripts & Community">
+  <meta property="og:description" content="RedM security, law-enforcement tools, immersive systems and The Lobby community. Build a better frontier.">
   <meta property="og:url" content="https://hypasscripts.github.io/">
-  <meta property="og:site_name" content="Hypas Development">
+  <title>Hypas Development | Premium RedM Scripts for VORP Servers</title>
+  <style>
+    :root { color-scheme: dark; --base:#0b1320; --surface:#101b2b; --card:#152438; --card2:#101e2d; --line:#2b3e52; --text:#f2f5f9; --muted:#b0bfd0; --subtle:#7f96ac; --accent:#c8a776; --accent-light:#e2c79c; --accent-dark:#151a22; --max:1180px; }
+    *,*::before,*::after {box-sizing:border-box}
+    html {scroll-behavior:smooth}
+    body {margin:0;min-width:320px;background:var(--base);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    body::before {content:"";position:absolute;top:0;left:0;right:0;height:720px;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 72% 10%,rgba(60,89,117,.30),transparent 52%),radial-gradient(ellipse at 10% 25%,rgba(106,78,48,.12),transparent 42%)}
+    a {color:inherit}
+    a:focus-visible,button:focus-visible {outline:3px solid var(--accent-light);outline-offset:4px}
+    .wrap {width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+    .skip {position:absolute;left:-9999px;top:0;padding:12px;background:var(--accent);color:#101820;z-index:5}
+    .skip:focus {left:10px;top:10px}
+    .site-header {border-bottom:1px solid rgba(158,182,205,.14);background:rgba(11,19,32,.85);backdrop-filter:blur(14px);position:sticky;top:0;z-index:10}
+    .topbar {min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand {display:flex;align-items:center;gap:13px;text-decoration:none;line-height:1.12}
+    .brand-mark {display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(200,167,118,.55);border-radius:10px;background:linear-gradient(145deg,#2f3942,#131d29);font-size:21px;font-weight:900;color:var(--accent-light)}
+    .brand-name {display:block;letter-spacing:.10em;font-size:13px;font-weight:850}
+    .brand-sub {display:block;letter-spacing:.13em;text-transform:uppercase;color:var(--subtle);font-size:10px;font-weight:700;margin-top:5px}
+    nav {display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+    nav a {text-decoration:none;font-size:13px;font-weight:680;color:#bac6d4;transition:color .15s}
+    nav a:hover,nav a[aria-current="page"] {color:var(--accent-light)}
+    nav .nav-cta {color:#151a22;background:var(--accent);padding:9px 15px;border-radius:8px}
+    nav .nav-cta:hover {color:#101820;background:#e0bf90}
+    .eyebrow {font-size:11px;color:var(--accent-light);font-weight:800;letter-spacing:.19em;text-transform:uppercase}
+    h1,h2,h3,p {margin-top:0}
+    h1 {font-size:clamp(42px,5.65vw,79px);font-weight:820;line-height:1.07;letter-spacing:-.055em;margin:18px 0 24px;max-width:700px}
+    h1 span {color:var(--accent-light)}
+    h2 {font-size:clamp(29px,3.5vw,43px);line-height:1.14;letter-spacing:-.04em;margin-bottom:14px}
+    h3 {font-size:19px;line-height:1.25;margin-bottom:8px}
+    p {color:var(--muted)}
+    .hero {display:grid;grid-template-columns:1.13fr .87fr;align-items:center;gap:clamp(24px,5vw,82px);padding:90px 0 106px}
+    .hero-desc {max-width:565px;font-size:18px;line-height:1.8}
+    .actions {display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:33px}
+    .btn {display:inline-flex;justify-content:center;align-items:center;text-decoration:none;font-weight:800;font-size:14px;border-radius:9px;padding:15px 21px;min-height:50px;transition:transform .15s, background .15s;border:1px solid transparent}
+    .btn:hover {transform:translateY(-2px)}
+    .btn-primary {color:#151921;background:var(--accent)}
+    .btn-primary:hover {background:var(--accent-light)}
+    .btn-secondary {border-color:#52647b;color:#e1e8ef;background:rgba(18,33,49,.58)}
+    .btn-secondary:hover {background:#23374b}
+    .pills {display:flex;gap:9px;flex-wrap:wrap;margin-top:29px}
+    .pill {padding:5px 11px;border-radius:100px;border:1px solid #354c62;color:#abc0d0;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .console {position:relative;border:1px solid #37516a;border-radius:18px;padding:24px;background:linear-gradient(155deg,#172b3f 0%,#101c2c 78%);box-shadow:0 30px 80px rgba(0,0,0,.25)}
+    .console:before {content:"";position:absolute;inset:9px;border-radius:13px;border:1px solid rgba(220,236,247,.06);pointer-events:none}
+    .console-title {display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:19px;border-bottom:1px solid #32465b;margin-bottom:18px}
+    .console-title strong {letter-spacing:.12em;font-size:12px}
+    .live-dot {width:8px;height:8px;border-radius:50%;background:#90bea7;box-shadow:0 0 0 5px rgba(144,190,167,.12)}
+    .console-lead {font-size:10px;text-transform:uppercase;letter-spacing:.16em;color:var(--accent-light);font-weight:900;margin-bottom:13px}
+    .console h2 {font-size:29px;letter-spacing:-.03em;margin-bottom:12px}
+    .console>p {font-size:14px;line-height:1.7}
+    .console-lines {margin-top:25px;display:grid;gap:10px}
+    .line-item {border:1px solid #2b4458;background:#122335;border-radius:9px;padding:13px 14px;display:flex;align-items:center;gap:12px}
+    .line-icon {color:var(--accent-light);display:grid;place-items:center;width:33px;height:33px;background:rgba(200,167,118,.10);border:1px solid rgba(200,167,118,.15);border-radius:8px;font-weight:900}
+    .line-item strong {display:block;font-size:13px;font-weight:800;line-height:1.2}
+    .line-item small {display:block;margin-top:4px;color:#8fa5b9;font-size:11px}
+    .console-bottom {border-top:1px solid #34465b;margin-top:19px;padding-top:16px;font-size:11px;letter-spacing:.09em;font-weight:700;text-transform:uppercase;color:#b0c1ce;display:flex;justify-content:space-between}
+    .section {padding:84px 0;border-top:1px solid rgba(165,190,212,.14)}
+    .section-intro {max-width:700px;margin-bottom:32px}
+    .section-intro p {font-size:16px;max-width:640px}
+    .grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .feature {background:linear-gradient(135deg,#142235,#111d2b);border:1px solid #2a4056;border-radius:14px;padding:26px;min-height:230px}
+    .feature .num {color:var(--accent-light);font-size:11px;font-weight:900;letter-spacing:.15em;margin-bottom:27px}
+    .feature p {font-size:14px;line-height:1.75;margin-bottom:0}
+    .panel {display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:35px;border:1px solid #32495e;border-radius:18px;background:linear-gradient(100deg,#162438,#10202f)}
+    .panel p {margin:0;font-size:15px}
+    .list {list-style:none;padding:0;margin:0;display:grid;gap:14px}
+    .list li {display:flex;align-items:flex-start;gap:11px;color:#c2cfda;font-size:14px}
+    .tick {display:grid;place-items:center;border:1px solid rgba(200,167,118,.5);border-radius:6px;color:var(--accent-light);width:22px;height:22px;flex:none;font-weight:800}
+    .faq {display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .faq article {border:1px solid #2d4156;background:#101c2c;border-radius:12px;padding:24px}
+    .faq h3 {font-size:17px}
+    .faq p {font-size:14px;margin-bottom:0}
+    .final {padding:77px 0 94px;text-align:center}
+    .final .final-inner {border:1px solid #4a4b42;border-radius:18px;padding:64px 26px;background:radial-gradient(ellipse at 50% 0%,rgba(200,167,118,.12),transparent 60%),#111d2c}
+    .final h2 {max-width:670px;margin:12px auto 17px}
+    .final p {max-width:600px;margin:0 auto}
+    .final .actions {justify-content:center;margin-top:30px}
+    footer {border-top:1px solid #2a3a4c;padding:33px 0}
+    .footer-inner {display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .footer-inner small {color:#8398ad;font-size:12px}
+    .footer-links {display:flex;gap:19px;flex-wrap:wrap}
+    .footer-links a {font-size:12px;text-decoration:none;color:#aabaca}
+    .footer-links a:hover {color:var(--accent-light)}
+    @media(max-width:900px) {.hero {grid-template-columns:1fr;padding:60px 0 75px}.console {max-width:640px}.grid {grid-template-columns:1fr 1fr}.topbar {align-items:flex-start;padding:14px 0;flex-direction:column;gap:16px}nav {gap:17px}.panel {grid-template-columns:1fr}}
+    @media(max-width:610px) {.wrap {width:min(var(--max),calc(100% - 32px))}.topbar {gap:12px}nav {gap:14px}nav a {font-size:12px}.hero {padding-top:43px}.hero-desc {font-size:16px}.grid,.faq {grid-template-columns:1fr}.section {padding:60px 0}.panel {padding:24px}.console {padding:20px}.final {padding:50px 0}.final .final-inner {padding:40px 21px}.footer-inner {align-items:flex-start;flex-direction:column}.btn {width:100%}.actions {width:100%}}
+    @media(prefers-reduced-motion:reduce) {html {scroll-behavior:auto}.btn {transition:none}.btn:hover {transform:none}}
+  
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Hypas Development",
-    "alternateName": "Hypas Scripts",
-    "url": "https://hypasscripts.github.io/",
-    "sameAs": [
-      "https://github.com/hypasscripts"
-    ],
-    "description": "Premium RedM scripts, documentation and practical resources for VORP roleplay servers.",
-    "knowsAbout": [
-      "RedM development",
-      "VORP Core",
-      "RedM server security",
-      "RedM police MDT systems",
-      "RedM economy systems",
-      "RedM roleplay scripts"
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Hypas Development",
-    "alternateName": "Hypas Scripts",
-    "url": "https://hypasscripts.github.io/"
-  }
-  </script>
+    /* Real dashboard image with useful offline fallback */
+    .shield-screen {position:relative;width:100%;aspect-ratio:16/10;border:1px solid #30485e;border-radius:8px;overflow:hidden;background:#0a1825}
+    .shield-screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#0a1825;border:0;border-radius:0;z-index:2}
+    .dashboard-fallback{position:absolute;inset:0;display:grid;grid-template-columns:23% 77%;font-family:system-ui,sans-serif;color:#bbccdc}
+    .df-sidebar{padding:7%;display:grid;align-content:start;gap:11px;background:#0b1826;border-right:1px solid #254058}
+    .df-logo{width:30px;height:30px;display:grid;place-items:center;border:1px solid #b99e79;border-radius:5px;color:#d6ba8b;font-size:17px;font-weight:800}
+    .df-sidebar span{font-size:9px;letter-spacing:.1em;color:#728da4}
+    .df-sidebar span:first-of-type{color:#d6ba8b}
+    .df-main{padding:6%;min-width:0}
+    .df-title{font-size:9px;letter-spacing:.12em;color:#d3b88d}
+    .df-title strong{display:block;margin-top:10px;color:#e1eaf3;font-size:17px;letter-spacing:.02em}
+    .df-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:14px}
+    .df-metrics i{font-size:8px;letter-spacing:.05em;border:1px solid #224660;background:#13293b;padding:11px 10px;font-style:normal}
+    .df-metrics b{color:#9bd5b0;display:block;font-size:11px;margin-top:5px}
+    .df-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:11px}
+    .df-grid span{padding:10px;font-size:8px;border:1px solid #254159;background:#0d2233}
+    .df-foot{margin-top:10px;font-size:8px;letter-spacing:.11em;color:#819fb6}
+    /* Homepage additions using the exact Community Hub palette */
+    .hero-home {padding-top:86px;padding-bottom:92px}
+    .hero-home h1 {max-width:810px}
+    .hero-home .hero-desc {max-width:650px}
+    .hero-shield {margin:22px 0 0;border:1px solid #35506b;background:linear-gradient(150deg,#152739,#081420);border-radius:16px;padding:13px;box-shadow:0 23px 85px rgba(0,0,0,.38)}
+    .hero-shield .shield-head {display:flex;justify-content:space-between;align-items:center;padding:8px 8px 13px;color:#b5cce0;font-size:10px;font-weight:800;letter-spacing:.15em}
+    .hero-shield img {display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border:1px solid #30485e;background:#0c1826;border-radius:8px}
+    .shield-foot {padding:13px 9px 3px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:11px;color:#91a9bd}
+    .shield-foot b {color:#e2c79c;letter-spacing:.05em}
+    .split-grid {display:grid;grid-template-columns:1.17fr .83fr;gap:22px;align-items:stretch}
+    .product-card {border-radius:18px;border:1px solid #30465d;background:linear-gradient(130deg,#16283c,#101b2c);padding:32px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+    .product-card:after {content:'';position:absolute;right:-65px;top:-65px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(199,164,115,.1),transparent 70%);pointer-events:none}
+    .product-card .eyebrow {margin-bottom:21px}
+    .product-card h3 {font-size:clamp(23px,2.45vw,34px);letter-spacing:-.045em;line-height:1.17}
+    .product-card p {font-size:14px;max-width:565px}
+    .product-card .card-tags {display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 24px}
+    .product-card .card-tags span {border:1px solid #425970;border-radius:100px;padding:4px 9px;font-size:10px;font-weight:750;color:#aabed2}
+    .product-card .card-actions {display:flex;gap:10px;margin-top:auto;flex-wrap:wrap}
+    .smallbtn {display:inline-flex;align-items:center;justify-content:center;padding:11px 17px;border:1px solid #526780;border-radius:8px;color:#e2ebf4;text-decoration:none;font-weight:800;font-size:13px}
+    .smallbtn.gold {background:#c8a776;border-color:#c8a776;color:#141a21}
+    .smallbtn:hover {background:#233d53}.smallbtn.gold:hover {background:#e2c79c}
+    .mini-cards {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+    .mini-cards .feature {min-height:unset;padding:24px}
+    .mini-cards .feature .num {margin-bottom:14px}
+    .feature a,.product-card a:not(.smallbtn) {color:#e2c79c;text-decoration:none;font-weight:760}
+    .feature a:hover,.product-card a:hover {text-decoration:underline}
+    .community-promo {background:radial-gradient(ellipse at 80% 20%,rgba(197,160,108,.12),transparent 40%),linear-gradient(110deg,#182d42,#101c2a);border:1px solid #4a5260;border-radius:20px;padding:clamp(28px,5vw,59px);display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+    .community-promo ul {list-style:none;margin:0;padding:0;display:grid;gap:12px}
+    .community-promo li {border:1px solid #345069;border-radius:9px;padding:15px 17px;background:#0f2031;color:#d4e0eb;font-size:14px}
+    .community-promo li b {color:#dfbe8e;margin-right:11px}
+    .resource-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .resource-card {padding:24px;border:1px solid #2c4259;background:#132237;border-radius:13px}
+    .resource-card .num {font-size:11px;font-weight:800;color:#dbbb8d;letter-spacing:.1em;margin-bottom:15px}
+    .resource-card p {font-size:14px}
+    .compact {min-height:unset}.compact .num{margin-bottom:15px}
+    @media(max-width:900px) {.hero-home {padding:62px 0}.split-grid,.community-promo{grid-template-columns:1fr}.hero-shield{max-width:640px}.mini-cards,.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:610px) {.hero-home{padding-top:43px}.mini-cards,.resource-grid{grid-template-columns:1fr}.product-card{padding:24px}.community-promo{padding:25px}.card-actions .smallbtn{width:100%}}
+</style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Hypas Development","url":"https://hypasscripts.github.io/","sameAs":["https://github.com/hypasscripts"]}</script>
 </head>
-
 <body>
-  <a class="skipLink" href="#main">Skip to content</a>
-
-  <header class="siteHeader">
-    <a class="brand" href="#top" aria-label="Hypas Development homepage">
-      <span class="brandMark" aria-hidden="true">HS</span>
-      <span class="brandText">
-        <strong>HYPAS</strong>
-        <small>DEVELOPMENT</small>
-      </span>
-    </a>
-
-    <button class="menuButton" id="menuButton" type="button" aria-label="Open navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="siteNav" id="siteNav" aria-label="Primary navigation">
-      <a href="#products">Products</a>
-      <a href="#knowledge">Knowledge</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#free-resources">Free Resources</a>
-      <a href="#documentation">Documentation</a>
-      <a class="navButton" href="https://the-lobby-shop.tebex.io/">Storefront</a>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="heroGrid">
-        <div class="heroCopy reveal">
-          <p class="eyebrow">PREMIUM REDM SYSTEMS</p>
-          <h1>Build a server<br>players <em>remember.</em></h1>
-          <p class="heroLead">
-            Hypas Development creates structured, performance-conscious RedM systems for
-            serious VORP roleplay servers—supported by public documentation, practical
-            knowledge centres and accountable long-term development.
-          </p>
-
-          <div class="heroActions">
-            <a class="button primary" href="#products">Explore Hypas products</a>
-            <a class="button secondary" href="https://github.com/hypasscripts">View GitHub</a>
-          </div>
-
-          <div class="heroTags" aria-label="Hypas specialisms">
-            <span>RedM</span>
-            <span>VORP Core</span>
-            <span>Server Security</span>
-            <span>Law Systems</span>
-            <span>Roleplay Economy</span>
-          </div>
-        </div>
-
-        <aside class="companyPanel reveal" aria-label="Hypas Development company overview">
-          <div class="panelTop">
-            <span><i></i> HYPAS NETWORK // ONLINE</span>
-            <b>2026</b>
-          </div>
-
-          <div class="companySeal" aria-hidden="true">
-            <span>HS</span>
-            <small>REDM SYSTEMS</small>
-          </div>
-
-          <div class="panelRows">
-            <a href="https://hypasscripts.github.io/hypas-redm-anticheat/">
-              <small>FLAGSHIP SECURITY</small>
-              <b>Hypas RedM Anti-Cheat</b>
-              <em>LIVE</em>
-            </a>
-            <a href="https://hypasscripts.github.io/hypas-redm-mdt/">
-              <small>LAW ENFORCEMENT</small>
-              <b>Hypas Law MDT</b>
-              <em>NEXT</em>
-            </a>
-            <a href="#roadmap">
-              <small>PRODUCT PIPELINE</small>
-              <b>Farming, Stables &amp; Moonshine</b>
-              <em>03+</em>
-            </a>
-          </div>
-
-          <p>
-            Public websites contain product information and documentation only.
-            Commercial source code remains distributed through authorised Hypas channels.
-          </p>
-        </aside>
-      </div>
-    </section>
-
-    <section class="trustStrip" aria-label="Hypas development principles">
-      <div><b>Documented</b><span>Clear requirements, installation and configuration guidance</span></div>
-      <div><b>Accountable</b><span>Changelogs, auditability and defined support expectations</span></div>
-      <div><b>Purpose-built</b><span>Systems shaped around real RedM server workflows</span></div>
-      <div><b>Connected</b><span>Products designed to strengthen a wider Hypas ecosystem</span></div>
-    </section>
-
-    <section class="section" id="products">
-      <div class="sectionHeading reveal">
-        <div>
-          <p class="eyebrow">FEATURED PRODUCTS</p>
-          <h2>Two systems. One growing platform.</h2>
-          <p class="sectionIntro">
-            Each flagship product has its own public repository, product website,
-            documentation and specialist knowledge centre.
-          </p>
-        </div>
-        <span class="sectionCode">HYPAS / PRODUCTS</span>
-      </div>
-
-      <div class="productGrid">
-        <article class="productCard productCardSecurity reveal">
-          <div class="productCardTop">
-            <span>01 / SERVER SECURITY</span>
-            <b>AVAILABLE</b>
-          </div>
-
-          <div class="productMonogram" aria-hidden="true">AC</div>
-
-          <div class="productContent">
-            <small>HYPAS REDM ANTI-CHEAT</small>
-            <h3>Protection built around evidence, not impossible promises.</h3>
-            <p>
-              Layered event, entity, economy, integrity and behavioural safeguards,
-              supported by evidence retention and authorised staff response controls.
-            </p>
-
-            <ul>
-              <li>Event firewall and honeypots</li>
-              <li>Entity and resource safeguards</li>
-              <li>Economy, inventory and weapon watchdogs</li>
-              <li>Evidence-led investigation workflow</li>
-            </ul>
-
-            <div class="cardActions">
-              <a class="button primary" href="https://hypasscripts.github.io/hypas-redm-anticheat/">Visit product site</a>
-              <a class="textLink" href="https://github.com/hypasscripts/hypas-redm-anticheat">Public repository →</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="productCard productCardLaw reveal">
-          <div class="productCardTop">
-            <span>02 / LAW ENFORCEMENT</span>
-            <b>LAUNCHING NEXT</b>
-          </div>
-
-          <div class="productMonogram" aria-hidden="true">MDT</div>
-
-          <div class="productContent">
-            <small>HYPAS LAW MDT — THE LAW LEDGER</small>
-            <h3>Structured records. Accountable policing. Serious roleplay.</h3>
-            <p>
-              A comprehensive RedM police MDT for VORP servers, bringing reports,
-              people, charges, penal codes, warrants, fines, evidence, permissions
-              and audit history into one operational interface.
-            </p>
-
-            <ul>
-              <li>Reports, persons and officer records</li>
-              <li>Penal codes, warrants, fines and jail</li>
-              <li>Evidence, archive and audit trail</li>
-              <li>Configurable rank permissions</li>
-            </ul>
-
-            <div class="cardActions">
-              <a class="button primary" href="https://hypasscripts.github.io/hypas-redm-mdt/">Visit MDT site</a>
-              <a class="textLink" href="https://github.com/hypasscripts/hypas-redm-mdt">Public repository →</a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section knowledgeSection" id="knowledge">
-      <div class="sectionHeading reveal">
-        <div>
-          <p class="eyebrow">KNOWLEDGE CENTRES</p>
-          <h2>Useful information before the sales pitch.</h2>
-          <p class="sectionIntro">
-            Hypas publishes specialist guides that help server owners and developers
-            understand the systems they deploy.
-          </p>
-        </div>
-        <span class="sectionCode">LEARN / APPLY / IMPROVE</span>
-      </div>
-
-      <div class="knowledgeGrid">
-        <a class="knowledgeCard reveal" href="https://hypasscripts.github.io/hypas-redm-anticheat/security-centre/">
-          <div class="knowledgeNumber">01</div>
-          <small>LIVE KNOWLEDGE CENTRE</small>
-          <h3>RedM Security Centre</h3>
-          <p>
-            Defensive guidance covering anti-cheat architecture, server authority,
-            event validation, entity protection, evidence and false-positive control.
-          </p>
-          <span>Open the Security Centre →</span>
-        </a>
-
-        <a class="knowledgeCard reveal" href="https://github.com/hypasscripts/hypas-redm-mdt">
-          <div class="knowledgeNumber">02</div>
-          <small>OPENING WITH MDT</small>
-          <h3>RedM Law Centre</h3>
-          <p>
-            Practical guidance for police records, case management, penal codes,
-            warrants, evidence, fines, jail and role-based permissions.
-          </p>
-          <span>Follow the MDT repository →</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="section roadmapSection" id="roadmap">
-      <div class="sectionHeading reveal">
-        <div>
-          <p class="eyebrow">PRODUCT ROADMAP</p>
-          <h2>The wider Hypas ecosystem.</h2>
-          <p class="sectionIntro">
-            Existing systems will receive dedicated public sites as they reach release readiness.
-          </p>
-        </div>
-        <span class="sectionCode">PLANNED RELEASES</span>
-      </div>
-
-      <div class="roadmapGrid">
-        <article class="roadmapCard reveal">
-          <span>03</span>
-          <small>ECONOMY &amp; OWNERSHIP</small>
-          <h3>Hypas Farming V2</h3>
-          <p>Crop quality, legal and illegal production, farm ownership, workers, disease, weather and administration.</p>
-          <b>PREPARING FOR SALE</b>
-        </article>
-
-        <article class="roadmapCard reveal">
-          <span>04</span>
-          <small>HORSES &amp; LIFECYCLE</small>
-          <h3>Hypas Stables</h3>
-          <p>Ownership, breeding, bloodlines, passports, training, care, markets, veterinary and stolen-horse systems.</p>
-          <b>IN DEVELOPMENT</b>
-        </article>
-
-        <article class="roadmapCard reveal">
-          <span>05</span>
-          <small>ILLEGAL ECONOMY</small>
-          <h3>Hypas Moonshine V2</h3>
-          <p>Interactive distilling, buyers, contracts, physical stock, deliveries, risk and upgrade paths.</p>
-          <b>FINAL POLISH</b>
-        </article>
-
-        <article class="roadmapCard reveal">
-          <span>06</span>
-          <small>FUTURE FLAGSHIP</small>
-          <h3>Hypas Frontier Medicine</h3>
-          <p>Persistent injuries, diagnosis, treatment, medical records, pharmacy systems and doctor roleplay.</p>
-          <b>PLANNED</b>
-        </article>
-      </div>
-    </section>
-
-    <section class="section freeSection" id="free-resources">
-      <div class="sectionHeading reveal">
-        <div>
-          <p class="eyebrow">FREE RESOURCES</p>
-          <h2>Useful scripts that introduce servers to Hypas.</h2>
-          <p class="sectionIntro">
-            Smaller public resources help server owners evaluate Hypas quality before purchasing a flagship system.
-          </p>
-        </div>
-        <span class="sectionCode">COMMUNITY RELEASES</span>
-      </div>
-
-      <div class="freeGrid">
-        <article class="freeCard reveal">
-          <small>TRAVEL UTILITY</small>
-          <h3>Hypas Guarma</h3>
-          <p>A lightweight route into Guarma designed as an accessible public Hypas resource.</p>
-          <span>Public release</span>
-        </article>
-
-        <article class="freeCard reveal">
-          <small>IMMERSIVE UTILITY</small>
-          <h3>Hypas Pocket Watch</h3>
-          <p>An item-based pocket watch showing in-world time, date and weather through an old-west presentation.</p>
-          <span>Free resource</span>
-        </article>
-
-        <article class="freeCard reveal">
-          <small>ROLEPLAY INTERACTION</small>
-          <h3>Hypas Guitar</h3>
-          <p>A simple instrument system with playable notes, guitar presentation and planned automatic western tunes.</p>
-          <span>In development</span>
-        </article>
-      </div>
-
-      <a class="button secondary centredButton" href="https://github.com/hypasscripts">Browse Hypas on GitHub</a>
-    </section>
-
-    <section class="section documentationSection" id="documentation">
-      <div class="documentationPanel reveal">
-        <div>
-          <p class="eyebrow">DOCUMENTATION &amp; SUPPORT</p>
-          <h2>Public information. Clear expectations.</h2>
-          <p>
-            Each major Hypas product is supported by a public repository containing
-            product information, requirements, installation guidance, configuration
-            references, changelogs and support procedures.
-          </p>
-
-          <div class="documentationActions">
-            <a class="button primary" href="https://github.com/hypasscripts">GitHub organisation</a>
-            <a class="button secondary" href="https://the-lobby-shop.tebex.io/">Hypas storefront</a>
-          </div>
-        </div>
-
-        <div class="documentationLinks">
-          <a href="https://github.com/hypasscripts/hypas-redm-anticheat">
-            <small>SECURITY PRODUCT</small>
-            <b>Anti-Cheat repository</b>
-            <span>README, documentation and changelog →</span>
-          </a>
-
-          <a href="https://github.com/hypasscripts/hypas-redm-mdt">
-            <small>LAW PRODUCT</small>
-            <b>Law MDT repository</b>
-            <span>Product information and launch documentation →</span>
-          </a>
-
-          <a href="https://hypasscripts.github.io/hypas-redm-anticheat/security-centre/">
-            <small>TECHNICAL GUIDANCE</small>
-            <b>Security Centre</b>
-            <span>Defensive RedM server-security articles →</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="finalCta">
-      <div class="reveal">
-        <p class="eyebrow">HYPAS DEVELOPMENT</p>
-        <h2>Built for the servers that expect more.</h2>
-        <p>
-          Explore the current flagship systems, follow the public roadmap and use
-          the knowledge centres to understand the architecture behind the product.
-        </p>
-      </div>
-
-      <div class="finalActions reveal">
-        <a class="button primary" href="https://hypasscripts.github.io/hypas-redm-anticheat/">Explore Anti-Cheat</a>
-        <a class="button secondary" href="https://hypasscripts.github.io/hypas-redm-mdt/">Explore Law MDT</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footerBrand">
-      <span class="brandMark" aria-hidden="true">HS</span>
-      <span>
-        <strong>Hypas Development</strong>
-        <small>Professional RedM systems for serious servers.</small>
-      </span>
-    </div>
-
-    <div class="footerLinks">
-      <a href="#products">Products</a>
-      <a href="#knowledge">Knowledge</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="https://github.com/hypasscripts">GitHub</a>
-      <a href="https://the-lobby-shop.tebex.io/">Storefront</a>
-    </div>
-
-    <p>
-      Commercial source code is not published through these public repositories.
-      Product purchases and licensed delivery remain handled through authorised Hypas channels.
-    </p>
-  </footer>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap topbar">
+<a class="brand" href="/" aria-label="Hypas Development home"><span class="brand-mark" aria-hidden="true">H</span><span><span class="brand-name">HYPAS DEVELOPMENT</span><span class="brand-sub">RedM systems &amp; community</span></span></a>
+<nav aria-label="Main navigation">
+<a href="/" aria-current="page">Home</a><a href="#products">Products</a><a href="#knowledge">Knowledge</a><a href="/hypas-redm-anticheat/">Anti-Cheat</a><a href="/community/">Community</a><a href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Storefront</a><a class="nav-cta" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Join Discord ↗</a>
+</nav></div></header>
+<main id="main">
+<div class="wrap hero hero-home">
+<div><div class="eyebrow">Premium RedM Systems // Hypas Development</div><h1>Build a server players remember. <span>Build a better frontier.</span></h1>
+<p class="hero-desc">RedM security, law enforcement and immersive roleplay systems for serious VORP servers. Explore our resources, learn how they work and connect with fellow developers in The Lobby.</p>
+<div class="actions"><a class="btn btn-primary" href="#products">Explore Hypas Scripts ↗</a><a class="btn btn-secondary" href="/community/">Discover The Lobby</a></div>
+<div class="pills" aria-label="Development areas"><span class="pill">RedM / VORP</span><span class="pill">Server Security</span><span class="pill">Law Systems</span><span class="pill">Community</span></div></div>
+<div class="hero-shield" aria-label="Hypas Anti-Cheat dashboard showcase"><div class="shield-head"><span>HYPAS SECURITY // DASHBOARD PREVIEW</span><span>REDM / VORP</span></div>
+<div class="shield-screen"><div class="dashboard-fallback" aria-hidden="true"><div class="df-sidebar"><div class="df-logo">H</div><span>OVERVIEW</span><span>PLAYERS</span><span>TOOLS</span><span>AUDIT</span><span>LOGS</span></div><div class="df-main"><div class="df-title">HYPAS ANTI-CHEAT <strong>SECURITY OVERVIEW</strong></div><div class="df-metrics"><i>EVENT FIREWALL<br><b>ENABLED</b></i><i>ENTITY GUARD<br><b>ENABLED</b></i><i>EVIDENCE<br><b>RETAINED</b></i><i>STAFF TOOLS<br><b>READY</b></i></div><div class="df-grid"><span>Detection Monitoring</span><span>Player Investigation</span><span>Resource Integrity</span><span>Audit History</span></div><div class="df-foot">HYPAS SECURITY OPERATIONS // VORP</div></div></div><img src="https://raw.githubusercontent.com/hypasscripts/hypas-redm-anticheat/main/screenshots/overview.png" alt="Hypas RedM Anti-Cheat administration dashboard" loading="eager" onerror="this.style.display='none'"></div>
+<div class="shield-foot"><span>REAL PRODUCT INTERFACE</span><b>DETECTION · EVIDENCE · CONTROL</b></div></div></div>
+<section class="section" id="products"><div class="wrap"><div class="section-intro"><div class="eyebrow">Hypas / Products</div><h2>Purpose-built RedM resources.</h2><p>Each system is designed around practical server workflows, configurable behaviour and transparent documentation. Visit the dedicated pages for compatibility, features and purchase details.</p></div>
+<div class="split-grid">
+<article class="product-card"><div class="eyebrow">01 / Flagship Security</div><h3>Hypas RedM Anti-Cheat</h3><p>Layered event and entity protection, behavioural and economy monitoring, evidence capture, and investigation tools that help server administrators make informed decisions.</p><div class="card-tags"><span>VORP Core</span><span>oxmysql</span><span>Server-specific bans</span><span>One-time &amp; monthly options</span></div><div class="card-actions"><a class="smallbtn gold" href="/hypas-redm-anticheat/">Explore Anti-Cheat ↗</a><a class="smallbtn" href="/hypas-redm-anticheat/security-centre/">Security Centre</a></div></article>
+<article class="product-card"><div class="eyebrow">02 / Law &amp; Administration</div><h3>Hypas Law MDT</h3><p>Operational records for serious RedM law departments: reports, citizen profiles, warrants, fines, penal codes, audit trails and rank-controlled access.</p><div class="card-tags"><span>VORP</span><span>Case Management</span><span>Auditability</span></div><div class="card-actions"><a class="smallbtn gold" href="/hypas-redm-mdt/">Explore Law MDT ↗</a><a class="smallbtn" href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Storefront</a></div></article>
+</div>
+<div class="mini-cards" style="margin-top:16px">
+<article class="feature compact"><div class="num">03 / IMMERSIVE ROLEPLAY</div><h3>Hypas Archivist</h3><p>Artefact discovery, museum collections and meaningful player decisions around donated, kept or sold relics.</p><p><a href="https://forum.cfx.re/t/hypas-archivist-redm-vorp/5434322" target="_blank" rel="noopener noreferrer">View the release →</a></p></article>
+<article class="feature compact"><div class="num">04 / MORE IN DEVELOPMENT</div><h3>Farming, Stables &amp; Frontier</h3><p>More systems for ownership, economy, horses, veterinary care and immersive roleplay as testing and release work progresses.</p><p><a href="#roadmap">Explore the roadmap →</a></p></article></div>
+</div></section>
+<section class="section" id="community"><div class="wrap"><div class="community-promo"><div><div class="eyebrow">The Lobby // Community</div><h2>More than a script store.</h2><p>A home for RedM server owners, developers, roleplayers and content creators. Trade ideas, share work, find development discussions and help shape the next generation of Hypas systems.</p><div class="actions"><a class="btn btn-primary" href="/community/">Explore our Community Hub ↗</a><a class="btn btn-secondary" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Join Discord</a></div></div>
+<ul><li><b>01</b> RedM and VORP development discussions</li><li><b>02</b> Community showcases and player projects</li><li><b>03</b> Hypas resources, updates and support guidance</li></ul></div></div></section>
+<section class="section" id="knowledge"><div class="wrap"><div class="section-intro"><div class="eyebrow">Knowledge / Documentation</div><h2>Understand the systems you run.</h2><p>Public educational guides, product documentation and practical information for RedM operators.</p></div><div class="resource-grid">
+<article class="resource-card"><div class="num">01 / SECURITY CENTRE</div><h3>RedM Server Security</h3><p>Server authority, event validation, anti-cheat limitations, evidence collection and false-positive management.</p><a class="smallbtn" href="/hypas-redm-anticheat/security-centre/">Browse guides ↗</a></article>
+<article class="resource-card"><div class="num">02 / PRODUCT DOCUMENTATION</div><h3>Anti-Cheat Documentation</h3><p>Deployment requirements, configuration, protection levels and operational guidance.</p><a class="smallbtn" href="/hypas-redm-anticheat/documentation.html">Read documentation ↗</a></article>
+<article class="resource-card"><div class="num">03 / LAW ENFORCEMENT</div><h3>Law MDT Documentation</h3><p>Find product requirements and information on the Law Ledger's capabilities and record workflows.</p><a class="smallbtn" href="/hypas-redm-mdt/">Explore Law MDT ↗</a></article>
+</div></div></section>
+<section class="section" id="roadmap"><div class="wrap"><div class="section-intro"><div class="eyebrow">The wider Hypas ecosystem</div><h2>Built to keep evolving.</h2><p>These projects are in various stages of development and testing. Availability will be announced once each is ready.</p></div><div class="grid">
+<article class="feature compact"><div class="num">ECONOMY / FARMING</div><h3>Hypas Farming V2</h3><p>Crop quality, farm ownership, weather, workers and agricultural economy systems.</p></article>
+<article class="feature compact"><div class="num">HORSES / STABLES</div><h3>Hypas Stables</h3><p>Horses, bloodlines, lifecycle systems, training, veterinary care and ownership.</p></article>
+<article class="feature compact"><div class="num">ROLEPLAY / FRONTIER</div><h3>Hypas Frontier &amp; Medical</h3><p>Character-focused missions and richer medical and treatment workflows.</p></article>
+</div></div></section>
+<section class="section" id="free"><div class="wrap"><div class="section-intro"><div class="eyebrow">Community / Free Resources</div><h2>Useful scripts, straightforward to explore.</h2><p>Explore smaller public Hypas resources and learn about the development approach before purchasing a flagship product.</p></div><div class="grid">
+<article class="feature compact"><div class="num">TRAVEL UTILITY</div><h3>Hypas Guarma</h3><p>Accessible RedM travel functionality.</p></article><article class="feature compact"><div class="num">IMMERSIVE UTILITY</div><h3>Hypas Pocket Watch</h3><p>In-world time, date and weather through a pocket-watch interface.</p></article><article class="feature compact"><div class="num">ROLEPLAY INTERACTION</div><h3>Hypas Guitar</h3><p>An instrument interaction system under development.</p></article></div>
+<div class="actions"><a class="btn btn-secondary" href="https://github.com/hypasscripts" target="_blank" rel="noopener noreferrer">Explore public repositories ↗</a><a class="btn btn-secondary" href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Browse the store</a></div></div></section>
+<section class="final"><div class="wrap final-inner"><div class="eyebrow">Your frontier starts here</div><h2>Build with purpose. Connect with people.</h2><p>Discover premium RedM resources, join The Lobby and follow real development work in one place.</p><div class="actions"><a class="btn btn-primary" href="/community/">Join our Community ↗</a><a class="btn btn-secondary" href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Visit Tebex</a></div></div></section>
+</main>
+<footer><div class="wrap footer-inner"><small>HYPAS DEVELOPMENT / REDM SYSTEMS &amp; COMMUNITY</small><div class="footer-links"><a href="/community/">Community</a><a href="/hypas-redm-anticheat/">Anti-Cheat</a><a href="/hypas-redm-mdt/">Law MDT</a><a href="https://github.com/hypasscripts" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Storefront</a></div></div></footer>
 </body>
 </html>
