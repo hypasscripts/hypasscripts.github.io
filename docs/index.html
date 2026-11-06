@@ -159,6 +159,37 @@
     .new-card-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:22px}
     .new-product-card .smallbtn{font-size:12px}
     @media(max-width:610px){.new-card-links .smallbtn{width:100%}}
+
+    /* Creator Partnership Programme: homepage highlight */
+    .nav-creator {color:#eed4a3;border:1px solid rgba(200,167,118,.58);border-radius:7px;padding:7px 10px;background:rgba(200,167,118,.09);white-space:nowrap}
+    .nav-creator:hover {background:rgba(200,167,118,.2);color:#fff0cf}
+    .nav-creator span {color:#ddbc88;margin-left:4px;font-size:10px}
+    .hero-creator-notice {display:flex;gap:12px;align-items:center;text-decoration:none;margin:25px 0 4px;padding:13px 15px;border:1px solid rgba(200,167,118,.65);border-radius:11px;background:linear-gradient(95deg,rgba(200,167,118,.14),rgba(200,167,118,.035));max-width:600px;transition:border-color .15s,background .15s}
+    .hero-creator-notice:hover {border-color:#e2c79c;background:rgba(200,167,118,.17)}
+    .hero-creator-icon {flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:8px;background:rgba(200,167,118,.19);color:#f6d6a0;font-size:22px}
+    .hero-creator-message {display:grid;line-height:1.3;gap:4px}
+    .hero-creator-message strong {font-size:14px;color:#fff1dc}
+    .hero-creator-message small {font-size:12px;color:#bfc8d3}
+    .hero-creator-action {margin-left:auto;font-size:12px;white-space:nowrap;color:#e5c89b;font-weight:800}
+    .creator-feature {position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:30px;align-items:center;border:1px solid #9d7d4f;border-radius:18px;padding:36px 40px;background:radial-gradient(ellipse at 5% 0%,rgba(200,167,118,.16),transparent 52%),linear-gradient(105deg,#24251f 0%,#141f2b 55%,#111a26 100%);box-shadow:0 18px 60px rgba(0,0,0,.19)}
+    .creator-feature:before {content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:#c8a776}
+    .creator-feature-kicker {display:flex;align-items:center;gap:10px;letter-spacing:.14em;font-size:11px;font-weight:850;color:#edd0a0}
+    .creator-feature-dot {width:8px;height:8px;background:#d8ba87;border-radius:50%;box-shadow:0 0 0 5px rgba(200,167,118,.13)}
+    .creator-feature h2 {margin:16px 0 12px;font-size:clamp(29px,3.2vw,43px);line-height:1.13}
+    .creator-feature h2 span {color:#e2c79c}
+    .creator-feature-copy>p {max-width:590px;font-size:15px;line-height:1.7;margin:0 0 20px}
+    .creator-feature .creator-feature-button {padding:13px 19px;min-height:45px}
+    .creator-feature p.creator-feature-note {font-size:11px;line-height:1.55;color:#afbabf;margin:13px 0 0;max-width:525px}
+    .creator-feature-aside {border:1px solid rgba(200,167,118,.30);border-radius:13px;background:rgba(10,19,28,.50);padding:22px 23px}
+    .creator-feature-aside-title {font-size:11px;letter-spacing:.17em;font-weight:850;color:#d8bb89;margin-bottom:17px}
+    .creator-feature-step {display:flex;gap:14px;align-items:flex-start;padding:11px 0}
+    .creator-feature-step+.creator-feature-step {border-top:1px solid rgba(196,173,135,.17)}
+    .creator-feature-step>span {font-size:12px;font-weight:850;color:#e5c999;min-width:21px}
+    .creator-feature-step strong {display:block;color:#eee7dc;font-size:13px;line-height:1.35;margin-bottom:5px}
+    .creator-feature-step small {display:block;color:#afb9c5;font-size:12px;line-height:1.5}
+    @media(max-width:900px) {.creator-feature {grid-template-columns:1fr;gap:22px;padding:30px}.creator-feature-aside {max-width:none}}
+    @media(max-width:610px) {.hero-creator-notice{flex-wrap:wrap}.hero-creator-action{width:100%;margin-left:46px}.creator-feature{padding:23px 20px}.creator-feature-kicker{font-size:10px;letter-spacing:.1em}.creator-feature-aside{padding:18px}.creator-feature .creator-feature-button{width:100%}}
+    @media(prefers-reduced-motion:reduce) {.hero-creator-notice{transition:none}}
 </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Hypas Development","url":"https://hypasscripts.github.io/","sameAs":["https://github.com/hypasscripts"]}</script>
 </head>
@@ -167,17 +198,39 @@
 <header class="site-header"><div class="wrap topbar">
 <a class="brand" href="/" aria-label="Hypas Development home"><span class="brand-mark" aria-hidden="true">H</span><span><span class="brand-name">HYPAS DEVELOPMENT</span><span class="brand-sub">RedM systems &amp; community</span></span></a>
 <nav aria-label="Main navigation">
-<a href="/" aria-current="page">Home</a><a href="#products">Products</a><a href="#knowledge">Knowledge</a><a href="/hypas-redm-anticheat/">Anti-Cheat</a><a href="/community/">Community</a><a href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Storefront</a><a class="nav-cta" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Join Discord ↗</a>
+<a href="/" aria-current="page">Home</a><a href="#products">Products</a><a href="#knowledge">Knowledge</a><a href="/hypas-redm-anticheat/">Anti-Cheat</a><a href="/community/">Community</a><a class="nav-creator" href="/creators/">Creator Programme <span aria-hidden="true">★</span></a><a href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Storefront</a><a class="nav-cta" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Join Discord ↗</a>
 </nav></div></header>
 <main id="main">
 <div class="wrap hero hero-home">
 <div><div class="eyebrow">Premium RedM Systems // Hypas Development</div><h1>Build a server players remember. <span>Build a better frontier.</span></h1>
 <p class="hero-desc">RedM security, law enforcement, exploration and economy systems for serious VORP servers. Explore Anti-Cheat, MDT, Archivist and NPC Sales, and connect with fellow developers in The Lobby.</p>
 <div class="actions"><a class="btn btn-primary" href="#products">Explore Hypas Scripts ↗</a><a class="btn btn-secondary" href="/community/">Discover The Lobby</a></div>
+<a class="hero-creator-notice" href="/creators/" aria-label="Learn about the Hypas Creator Partnership Programme">
+  <span class="hero-creator-icon" aria-hidden="true">✦</span>
+  <span class="hero-creator-message"><strong>RedM creators wanted</strong><small>Partnership applications now open</small></span>
+  <span class="hero-creator-action" aria-hidden="true">View programme ↗</span>
+</a>
 <div class="pills" aria-label="Development areas"><span class="pill">RedM / VORP</span><span class="pill">Server Security</span><span class="pill">Law Systems</span><span class="pill">Community</span></div></div>
 <div class="hero-shield" aria-label="Hypas Anti-Cheat dashboard showcase"><div class="shield-head"><span>HYPAS SECURITY // DASHBOARD PREVIEW</span><span>REDM / VORP</span></div>
 <div class="shield-screen"><div class="dashboard-fallback" aria-hidden="true"><div class="df-sidebar"><div class="df-logo">H</div><span>OVERVIEW</span><span>PLAYERS</span><span>TOOLS</span><span>AUDIT</span><span>LOGS</span></div><div class="df-main"><div class="df-title">HYPAS ANTI-CHEAT <strong>SECURITY OVERVIEW</strong></div><div class="df-metrics"><i>EVENT FIREWALL<br><b>ENABLED</b></i><i>ENTITY GUARD<br><b>ENABLED</b></i><i>EVIDENCE<br><b>RETAINED</b></i><i>STAFF TOOLS<br><b>READY</b></i></div><div class="df-grid"><span>Detection Monitoring</span><span>Player Investigation</span><span>Resource Integrity</span><span>Audit History</span></div><div class="df-foot">HYPAS SECURITY OPERATIONS // VORP</div></div></div><img src="https://raw.githubusercontent.com/hypasscripts/hypas-redm-anticheat/main/screenshots/overview.png" alt="Hypas RedM Anti-Cheat administration dashboard" loading="eager" onerror="this.style.display='none'"></div>
 <div class="shield-foot"><span>REAL PRODUCT INTERFACE</span><b>DETECTION · EVIDENCE · CONTROL</b></div></div></div>
+<section class="wrap" aria-labelledby="creator-feature-heading">
+  <div class="creator-feature">
+    <div class="creator-feature-copy">
+      <div class="creator-feature-kicker"><span class="creator-feature-dot" aria-hidden="true"></span> HYPAS CREATOR PARTNERSHIPS · APPLICATIONS OPEN</div>
+      <h2 id="creator-feature-heading">Create content.<br><span>Grow with Hypas.</span></h2>
+      <p>Stream RedM, create YouTube videos or produce tutorials? We're inviting creators to partner with Hypas and showcase our premium RedM systems.</p>
+      <a class="btn btn-primary creator-feature-button" href="/creators/">Explore the Creator Programme ↗</a>
+      <p class="creator-feature-note">Creator codes, referral commissions and optional viewer discounts are agreed individually with approved partners.</p>
+    </div>
+    <div class="creator-feature-aside" aria-label="How the creator programme works">
+      <div class="creator-feature-aside-title">HOW IT WORKS</div>
+      <div class="creator-feature-step"><span>01</span><div><strong>Apply through The Lobby</strong><small>Open a creator partnership ticket on Discord</small></div></div>
+      <div class="creator-feature-step"><span>02</span><div><strong>Get your personal code</strong><small>Agree the partnership terms and eligible products</small></div></div>
+      <div class="creator-feature-step"><span>03</span><div><strong>Share your content</strong><small>Earn on eligible referrals through Tebex</small></div></div>
+    </div>
+  </div>
+</section>
 <section class="section" id="products"><div class="wrap"><div class="section-intro"><div class="eyebrow">Hypas / Products</div><h2>Purpose-built RedM resources.</h2><p>Each system is designed around practical server workflows, configurable behaviour and transparent documentation. Visit the dedicated pages for compatibility, features and purchase details.</p></div>
 <div class="split-grid">
 <article class="product-card"><div class="eyebrow">01 / Flagship Security</div><h3>Hypas RedM Anti-Cheat</h3><p>Layered event and entity protection, behavioural and economy monitoring, evidence capture, and investigation tools that help server administrators make informed decisions.</p><div class="card-tags"><span>VORP Core</span><span>oxmysql</span><span>Server-specific bans</span><span>One-time &amp; monthly options</span></div><div class="card-actions"><a class="smallbtn gold" href="/hypas-redm-anticheat/">Explore Anti-Cheat ↗</a><a class="smallbtn" href="/hypas-redm-anticheat/security-centre/">Security Centre</a></div></article>
@@ -205,6 +258,6 @@
 <div class="actions"><a class="btn btn-secondary" href="https://github.com/hypasscripts" target="_blank" rel="noopener noreferrer">Explore public repositories ↗</a><a class="btn btn-secondary" href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Browse the store</a></div></div></section>
 <section class="final"><div class="wrap final-inner"><div class="eyebrow">Your frontier starts here</div><h2>Build with purpose. Connect with people.</h2><p>Discover premium RedM resources, join The Lobby and follow real development work in one place.</p><div class="actions"><a class="btn btn-primary" href="/community/">Join our Community ↗</a><a class="btn btn-secondary" href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Visit Tebex</a></div></div></section>
 </main>
-<footer><div class="wrap footer-inner"><small>HYPAS DEVELOPMENT / REDM SYSTEMS &amp; COMMUNITY</small><div class="footer-links"><a href="/community/">Community</a><a href="/hypas-redm-anticheat/">Anti-Cheat</a><a href="/hypas-redm-mdt/">Law MDT</a><a href="/hypas-archivist/">Archivist</a><a href="/hypas-npc-sales/">NPC Sales</a><a href="https://github.com/hypasscripts" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Storefront</a></div></div></footer>
+<footer><div class="wrap footer-inner"><small>HYPAS DEVELOPMENT / REDM SYSTEMS &amp; COMMUNITY</small><div class="footer-links"><a href="/community/">Community</a><a href="/creators/">Creator Programme</a><a href="/hypas-redm-anticheat/">Anti-Cheat</a><a href="/hypas-redm-mdt/">Law MDT</a><a href="/hypas-archivist/">Archivist</a><a href="/hypas-npc-sales/">NPC Sales</a><a href="https://github.com/hypasscripts" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Storefront</a></div></div></footer>
 </body>
 </html>
