@@ -2,9 +2,10 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#131820">
-  <meta name="description" content="Join the Hypas Creator Partnership Programme. RedM streamers, YouTubers and content creators can apply for a personalised referral code and earn on qualifying Hypas Scripts purchases.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1320">
+  <meta name="description" content="Join the Hypas Creator Partnership Programme. RedM streamers, YouTubers and content creators can apply for a personalised referral code and earn on qualifying Hypas products purchases.">
+  <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://hypasscripts.github.io/creators/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Hypas Creator Partnership Programme">
@@ -12,27 +13,127 @@
   <meta property="og:url" content="https://hypasscripts.github.io/creators/">
   <title>Creator Partnership Programme | Hypas Development</title>
   <style>
-    :root{color-scheme:dark;--bg:#11161d;--panel:#1a2028;--border:#373839;--ink:#efe8da;--muted:#b6b4ad;--brass:#c9a771;--brass-dark:#715a3d}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 0%,#2c2a28 0,transparent 32%),var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
-    a{color:inherit}a:focus-visible{outline:2px solid var(--brass);outline-offset:4px} .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
-    header{border-bottom:1px solid var(--border);background:#10151bcc}nav{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 0;flex-wrap:wrap}
-    .wordmark{font-weight:800;letter-spacing:.18em;font-size:1.12rem;text-decoration:none;color:var(--ink)}.wordmark span{color:var(--brass)} .navlinks{display:flex;gap:22px;align-items:center;flex-wrap:wrap}.navlinks a{text-decoration:none;color:var(--muted);font-size:.9rem}.navlinks a:hover{color:var(--ink)}
-    .hero{padding:94px 0 64px;max-width:840px}.eyebrow{color:var(--brass);font-size:.79rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase}h1{font-size:clamp(2.25rem,6vw,4.35rem);line-height:1.11;letter-spacing:-.04em;margin:18px 0 20px}h2{font-size:clamp(1.45rem,3vw,2.15rem);line-height:1.2;letter-spacing:-.02em;margin:0 0 14px}h3{font-size:1.11rem;margin:0 0 8px}p{margin:0 0 16px}.lede{font-size:1.16rem;color:#d1cec8;max-width:670px}
-    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;justify-content:center;align-items:center;min-height:46px;padding:11px 20px;border:1px solid var(--brass-dark);border-radius:6px;text-decoration:none;font-weight:700;font-size:.93rem;transition:transform .12s ease}.btn:hover{transform:translateY(-2px)}.btn.primary{color:#17191a;background:var(--brass);border-color:var(--brass)}.btn.secondary{color:var(--ink);background:#22262b}
-    .note{font-size:.85rem;color:var(--muted);margin-top:12px}.section{padding:34px 0 48px;border-top:1px solid #32383c}.section-lede{max-width:760px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}.card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:24px}.step{color:var(--brass);font-weight:800;letter-spacing:.06em;font-size:.8rem;margin-bottom:12px}.card p{color:var(--muted);font-size:.94rem;margin:0}
-    .pill{display:inline-flex;border:1px solid #6b604d;color:#e5d3ae;padding:5px 11px;border-radius:40px;font-size:.78rem;margin:4px 8px 4px 0}.callout{background:linear-gradient(115deg,#24251f,#192127);border:1px solid #67563f;border-radius:12px;padding:28px;margin:28px 0 44px}.callout p{color:#ccc7be}.faq{display:grid;grid-template-columns:1fr 1fr;gap:15px}.faq .card{padding:22px}.faq p{color:var(--muted)}footer{border-top:1px solid var(--border);padding:30px 0 45px;color:var(--muted);font-size:.84rem}footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-    @media(max-width:720px){.hero{padding:64px 0 45px}.grid,.faq{grid-template-columns:1fr}.navlinks{gap:14px}.card{padding:20px}.callout{padding:22px}}
+    :root { color-scheme: dark; --base:#0b1320; --surface:#101b2b; --card:#152438; --card2:#101e2d; --line:#2b3e52; --text:#f2f5f9; --muted:#b0bfd0; --subtle:#7f96ac; --accent:#c8a776; --accent-light:#e2c79c; --max:1180px; }
+    *,*::before,*::after {box-sizing:border-box}
+    html {scroll-behavior:smooth}
+    body {margin:0;min-width:320px;background:var(--base);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    body::before {content:"";position:absolute;top:0;left:0;right:0;height:780px;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 72% 10%,rgba(60,89,117,.30),transparent 52%),radial-gradient(ellipse at 10% 25%,rgba(106,78,48,.12),transparent 42%)}
+    a {color:inherit}
+    a:focus-visible,button:focus-visible {outline:3px solid var(--accent-light);outline-offset:4px}
+    .wrap {width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+    .skip {position:absolute;left:-9999px;top:0;padding:12px;background:var(--accent);color:#101820;z-index:5}
+    .skip:focus {left:10px;top:10px}
+    .site-header {border-bottom:1px solid rgba(158,182,205,.14);background:rgba(11,19,32,.85);backdrop-filter:blur(14px);position:sticky;top:0;z-index:10}
+    .topbar {min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand {display:flex;align-items:center;gap:13px;text-decoration:none;line-height:1.12}
+    .brand-mark {display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(200,167,118,.55);border-radius:10px;background:linear-gradient(145deg,#2f3942,#131d29);font-size:21px;font-weight:900;color:var(--accent-light)}
+    .brand-name {display:block;letter-spacing:.10em;font-size:13px;font-weight:850}
+    .brand-sub {display:block;letter-spacing:.13em;text-transform:uppercase;color:var(--subtle);font-size:10px;font-weight:700;margin-top:5px}
+    nav {display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+    nav a {text-decoration:none;font-size:13px;font-weight:680;color:#bac6d4;transition:color .15s}
+    nav a:hover,nav a[aria-current="page"] {color:var(--accent-light)}
+    nav .nav-cta {color:#151a22;background:var(--accent);padding:9px 15px;border-radius:8px}
+    nav .nav-cta:hover {color:#101820;background:#e0bf90}
+    .hero {padding:86px 0 64px;max-width:860px}
+    .eyebrow {font-size:11px;color:var(--accent-light);font-weight:800;letter-spacing:.19em;text-transform:uppercase}
+    h1,h2,h3,p {margin-top:0}
+    h1 {font-size:clamp(42px,5.65vw,79px);font-weight:820;line-height:1.07;letter-spacing:-.055em;margin:18px 0 24px;max-width:760px}
+    h2 {font-size:clamp(29px,3.5vw,43px);line-height:1.14;letter-spacing:-.04em;margin-bottom:14px}
+    h3 {font-size:19px;line-height:1.25;margin-bottom:8px}
+    p {color:var(--muted)}
+    .lede {font-size:18px;line-height:1.8;max-width:690px}
+    .actions {display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:33px}
+    .btn {display:inline-flex;justify-content:center;align-items:center;text-decoration:none;font-weight:800;font-size:14px;border-radius:9px;padding:15px 21px;min-height:50px;transition:transform .15s, background .15s;border:1px solid transparent}
+    .btn:hover {transform:translateY(-2px)}
+    .btn-primary {color:#151921;background:var(--accent)}
+    .btn-primary:hover {background:var(--accent-light)}
+    .btn-secondary {border-color:#52647b;color:#e1e8ef;background:rgba(18,33,49,.58)}
+    .btn-secondary:hover {background:#23374b}
+    .note {font-size:13px;color:#95abc0;margin-top:14px}
+    .section {padding:72px 0;border-top:1px solid rgba(165,190,212,.14)}
+    .section-intro {max-width:760px;margin-bottom:26px}
+    .grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .card {background:linear-gradient(135deg,#142235,#111d2b);border:1px solid #2a4056;border-radius:14px;padding:26px;min-height:220px}
+    .step {color:var(--accent-light);font-size:11px;font-weight:900;letter-spacing:.15em;margin-bottom:18px}
+    .card p {font-size:14px;line-height:1.75;margin-bottom:0}
+    .pill-row {display:flex;gap:9px;flex-wrap:wrap;margin:18px 0 0}
+    .pill {padding:5px 11px;border-radius:100px;border:1px solid #354c62;color:#abc0d0;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .callout {background:radial-gradient(ellipse at 80% 20%,rgba(197,160,108,.12),transparent 40%),linear-gradient(110deg,#182d42,#101c2a);border:1px solid #4a5260;border-radius:20px;padding:clamp(24px,4vw,36px);margin-top:26px}
+    .callout p {max-width:760px}
+    .faq {display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .faq .card {min-height:unset}
+    .final {padding:77px 0 94px;text-align:center}
+    .final .final-inner {border:1px solid #4a4b42;border-radius:18px;padding:64px 26px;background:radial-gradient(ellipse at 50% 0%,rgba(200,167,118,.12),transparent 60%),#111d2c}
+    .final h2 {max-width:670px;margin:12px auto 17px}
+    .final p {max-width:600px;margin:0 auto;color:var(--muted)}
+    .final .actions {justify-content:center;margin-top:30px}
+    footer {border-top:1px solid #2a3a4c;padding:33px 0}
+    .footer-inner {display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+    .footer-inner small {color:#8398ad;font-size:12px}
+    .footer-links {display:flex;gap:19px;flex-wrap:wrap}
+    .footer-links a {font-size:12px;text-decoration:none;color:#aabaca}
+    .footer-links a:hover {color:var(--accent-light)}
+    @media(max-width:900px) {.topbar {align-items:flex-start;padding:14px 0;flex-direction:column;gap:16px}nav {gap:17px}.grid{grid-template-columns:1fr 1fr}.faq{grid-template-columns:1fr}.hero{padding-top:62px}}
+    @media(max-width:610px) {.wrap {width:min(var(--max),calc(100% - 32px))}.topbar {gap:12px}nav {gap:14px}nav a {font-size:12px}.hero {padding-top:43px}.lede {font-size:16px}.grid,.faq {grid-template-columns:1fr}.section {padding:60px 0}.card,.callout {padding:22px}.final {padding:50px 0}.final .final-inner {padding:40px 21px}.btn {width:100%}.actions {width:100%}}
+    @media(prefers-reduced-motion:reduce) {html {scroll-behavior:auto}.btn {transition:none}.btn:hover {transform:none}}
   </style>
 </head>
 <body>
-  <header><nav class="wrap" aria-label="Main navigation"><a href="/" class="wordmark"><span>H</span> HYPAS DEVELOPMENT</a><div class="navlinks"><a href="/">Home</a><a href="/community/">Community</a><a href="/creators/" aria-current="page" style="color:var(--brass)">Creator Programme</a><a href="https://the-lobby-shop.tebex.io/">Storefront</a><a href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Discord ↗</a></div></nav></header>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header"><div class="wrap topbar">
+    <a class="brand" href="/" aria-label="Hypas Development home"><span class="brand-mark" aria-hidden="true">H</span><span><span class="brand-name">HYPAS DEVELOPMENT</span><span class="brand-sub">RedM systems &amp; community</span></span></a>
+    <nav aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/#products">Products</a>
+      <a href="/#knowledge">Knowledge</a>
+      <a href="/hypas-redm-anticheat/">Anti-Cheat</a>
+      <a href="/community/">Community</a>
+      <a href="/creators/" aria-current="page">Creator Programme</a>
+      <a href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Storefront</a>
+      <a class="nav-cta" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Join Discord ↗</a>
+    </nav>
+  </div></header>
+
   <main id="main" class="wrap">
-    <section class="hero" aria-labelledby="main-title"><div class="eyebrow">Hypas / Creator partnerships</div><h1 id="main-title">Create content.<br>Build with Hypas.</h1><p class="lede">We're opening the door to RedM streamers, YouTubers, tutorial creators and server community partners who want to showcase meaningful gameplay and reliable server systems.</p><p>Approved partners can receive a personalised Creator Code, agreed referral earnings and optional audience discounts on eligible Hypas products. No generic mass promotions — just straightforward partnerships built around real content.</p><div class="buttons"><a class="btn primary" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Discuss a partnership on Discord ↗</a><a class="btn secondary" href="https://the-lobby-shop.tebex.io/">Explore Hypas products ↗</a></div><p class="note">Join The Lobby and open a ticket for a creator partnership, or ask the team where to apply.</p></section>
-    <section class="section" aria-labelledby="works"><div class="eyebrow">A straightforward programme</div><h2 id="works">How it works</h2><div class="grid"><article class="card"><div class="step">01 / APPLY</div><h3>Tell us about your content</h3><p>Share your YouTube, TikTok, Twitch or community channels through a Discord ticket. We're interested in engaged audiences and genuine RedM content, not just follower counts.</p></article><article class="card"><div class="step">02 / AGREE</div><h3>Receive a personal code</h3><p>If we're a good match, we'll agree the promotional arrangement, commission, applicable products and any buyer discount. Your individual code is issued through Tebex.</p></article><article class="card"><div class="step">03 / EARN</div><h3>Recommend what you've tested</h3><p>Share your code with your audience. Eligible purchases using the code are tracked through Tebex, with creator earnings allocated to a Tebex Wallet.</p></article></div></section>
-    <section class="section" aria-labelledby="who"><div class="eyebrow">Who it's for</div><h2 id="who">Real creators. Real demonstrations.</h2><p class="section-lede">We want partnerships that help server owners understand what they're buying. Tutorials, thoughtful reviews, gameplay demonstrations and useful community content are more valuable to us than repeated adverts.</p><div><span class="pill">YouTube & Shorts</span><span class="pill">Twitch & streams</span><span class="pill">TikTok & Reels</span><span class="pill">RedM server communities</span><span class="pill">Tutorial & review creators</span></div><div class="callout"><h3>What makes a strong application?</h3><p>Send us a link to your content, a short introduction to your audience and an idea for how you'd demonstrate Hypas products. We assess applications individually, and participation is subject to approval.</p><a class="btn primary" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Open The Lobby Discord ↗</a></div></section>
-    <section class="section" aria-labelledby="questions"><div class="eyebrow">The details</div><h2 id="questions">Frequently asked questions</h2><div class="faq"><article class="card"><h3>Is there a public creator code?</h3><p>No. Accepted partners receive their own code so referrals can be tracked fairly and attributed to the correct creator.</p></article><article class="card"><h3>How are earnings paid?</h3><p>Creator Codes are processed through Tebex. Approved creators need a Tebex Wallet to receive allocations and withdrawals, subject to Tebex terms and settlement periods.</p></article><article class="card"><h3>Does everyone receive the same rate?</h3><p>Rates, eligible products, buyer discounts and any deliverables are discussed and agreed before a partnership begins.</p></article><article class="card"><h3>Do I need a huge following?</h3><p>No fixed audience threshold is advertised. Relevant content, genuine engagement and a good fit with Hypas matter more than raw follower counts.</p></article><article class="card"><h3>Do I need to purchase scripts first?</h3><p>Not to enquire. Any testing access or sample arrangements are discussed individually and are not guaranteed.</p></article><article class="card"><h3>Are paid or affiliate videos disclosed?</h3><p>Yes. Creators should clearly disclose affiliate relationships, commissions or sponsorships where required by the applicable platform and advertising rules.</p></article></div></section>
-    <section class="section"><div class="eyebrow">Start a conversation</div><h2>Interested in working with Hypas?</h2><p class="section-lede">Join The Lobby, open a ticket and tell us what you create. We'll discuss whether there's a good fit and what an arrangement could look like.</p><div class="buttons"><a class="btn primary" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Apply via Discord ↗</a><a class="btn secondary" href="/community/">Visit The Lobby community hub</a></div></section>
+    <section class="hero" aria-labelledby="main-title">
+      <div class="eyebrow">Hypas / Creator Partnerships</div>
+      <h1 id="main-title">Create content.<br>Build with Hypas.</h1>
+      <p class="lede">We're opening the door to RedM streamers, YouTubers, tutorial creators and server community partners who want to showcase meaningful gameplay and reliable server systems.</p>
+      <p>Approved partners can receive a personalised Creator Code, agreed referral earnings and optional audience discounts on eligible Hypas products. No generic mass promotions — just straightforward partnerships built around real content.</p>
+      <div class="actions"><a class="btn btn-primary" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Discuss a partnership on Discord ↗</a><a class="btn btn-secondary" href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Explore Hypas products ↗</a></div>
+      <p class="note">Join The Lobby and open a ticket for a creator partnership, or ask the team where to apply.</p>
+    </section>
+
+    <section class="section" aria-labelledby="works">
+      <div class="section-intro"><div class="eyebrow">A straightforward programme</div><h2 id="works">How it works</h2></div>
+      <div class="grid">
+        <article class="card"><div class="step">01 / APPLY</div><h3>Tell us about your content</h3><p>Share your YouTube, TikTok, Twitch or community channels through a Discord ticket. We're interested in engaged audiences and genuine RedM content, not just follower counts.</p></article>
+        <article class="card"><div class="step">02 / AGREE</div><h3>Receive a personal code</h3><p>If we're a good match, we'll agree the promotional arrangement, commission, applicable products and any buyer discount. Your individual code is issued through Tebex.</p></article>
+        <article class="card"><div class="step">03 / EARN</div><h3>Recommend what you've tested</h3><p>Share your code with your audience. Eligible purchases using the code are tracked through Tebex, with creator earnings allocated to a Tebex Wallet.</p></article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="who">
+      <div class="section-intro"><div class="eyebrow">Who it's for</div><h2 id="who">Real creators. Real demonstrations.</h2><p>We want partnerships that help server owners understand what they're buying. Tutorials, thoughtful reviews, gameplay demonstrations and useful community content are more valuable to us than repeated adverts.</p></div>
+      <div class="pill-row"><span class="pill">YouTube & Shorts</span><span class="pill">Twitch & Streams</span><span class="pill">TikTok & Reels</span><span class="pill">RedM server communities</span><span class="pill">Tutorial & review creators</span></div>
+      <div class="callout"><h3>What makes a strong application?</h3><p>Send us a link to your content, a short introduction to your audience and an idea for how you'd demonstrate Hypas products. We assess applications individually, and participation is subject to approval.</p><div class="actions"><a class="btn btn-primary" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Open The Lobby Discord ↗</a></div></div>
+    </section>
+
+    <section class="section" aria-labelledby="questions">
+      <div class="section-intro"><div class="eyebrow">The details</div><h2 id="questions">Frequently asked questions</h2></div>
+      <div class="faq">
+        <article class="card"><h3>Is there a public creator code?</h3><p>No. Accepted partners receive their own code so referrals can be tracked fairly and attributed to the correct creator.</p></article>
+        <article class="card"><h3>How are earnings paid?</h3><p>Creator Codes are processed through Tebex. Approved creators need a Tebex Wallet to receive allocations and withdrawals, subject to Tebex terms and settlement periods.</p></article>
+        <article class="card"><h3>Does everyone receive the same rate?</h3><p>Rates, eligible products, buyer discounts and any deliverables are discussed and agreed before a partnership begins.</p></article>
+        <article class="card"><h3>Do I need a huge following?</h3><p>No fixed audience threshold is advertised. Relevant content, genuine engagement and a good fit with Hypas matter more than raw follower counts.</p></article>
+        <article class="card"><h3>Do I need to purchase scripts first?</h3><p>Not to enquire. Any testing access or sample arrangements are discussed individually and are not guaranteed.</p></article>
+        <article class="card"><h3>Are paid or affiliate videos disclosed?</h3><p>Yes. Creators should clearly disclose affiliate relationships, commissions or sponsorships where required by the applicable platform and advertising rules.</p></article>
+      </div>
+    </section>
+
+    <section class="final"><div class="final-inner"><div class="eyebrow">Start a conversation</div><h2>Interested in working with Hypas?</h2><p>Join The Lobby, open a ticket and tell us what you create. We'll discuss whether there's a good fit and what an arrangement could look like.</p><div class="actions"><a class="btn btn-primary" href="https://discord.gg/TeBh6UfHEm" target="_blank" rel="noopener noreferrer">Apply via Discord ↗</a><a class="btn btn-secondary" href="/community/">Visit The Lobby community hub</a></div></div></section>
   </main>
-  <footer><div class="wrap"><span>© Hypas Development · Premium RedM systems</span><span>Creator partnerships are subject to approval and agreed terms. Purchases are processed via Tebex.</span></div></footer>
+
+  <footer><div class="wrap footer-inner"><small>HYPAS DEVELOPMENT / REDM SYSTEMS &amp; COMMUNITY</small><div class="footer-links"><a href="/">Home</a><a href="/community/">Community</a><a href="/hypas-redm-anticheat/">Anti-Cheat</a><a href="/creators/">Creator Programme</a><a href="https://github.com/hypasscripts" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://the-lobby-shop.tebex.io/" target="_blank" rel="noopener noreferrer">Storefront</a></div></div></footer>
 </body>
 </html>
